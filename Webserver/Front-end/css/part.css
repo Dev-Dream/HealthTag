@@ -1,0 +1,118 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "NanumSquareRoundB";
+}
+
+.__contents{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+
+/* ---------------------------- title ---------------------------- */
+
+.title{
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+.title img{
+  width: 230px;
+}
+.title .title_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.title .title_content h1{
+  font-size: 40px;
+  font-family: "NanumSquareRoundEB";
+}
+.title .title_content .tags{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  
+  margin-top: 20px;
+}
+
+.title .title_content .tags input[type="checkbox"]:checked + label{
+  background-color: #9bdeac;
+}
+.title .title_content .tags label{
+  font-size: 18px;
+  padding: 7px 12px;
+  margin: 5px;
+  border-radius: 3px;
+  border: 1.3px solid black;
+}
+
+/* ---------------------------- list ---------------------------- */
+
+.list{
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  padding: 0px 100px 100px 100px;
+}
+.list_item{
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  margin: 10px 0px;
+  border: 2px solid black;
+}
+.list_item .base_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.list_item .base_info h1{
+  font-family: "NanumSquareRoundEB";
+  font-size: 30px;
+  margin-right: 50px;
+}
+.list_item .base_info h2{
+  font-size: 22px;
+  flex-grow: 1;
+}
+.list_item .base_info label{
+  font-family: "NanumSquareRoundEB";
+  font-size: 30px;
+  content: '+';
+  /* margin-right: 10px; */
+}
+
+.list_item .more_info{
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.list_item .more_info h2{
+  margin: 10px;
+  font-size: 17px;
+}
+.list_item .more_info a{
+  margin-left: 10px;
+  color: black;
+  text-decoration: none;
+}
+.list_item .desc_check:checked ~ .more_info{
+  height: fit-content;
+}
