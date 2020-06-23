@@ -1,0 +1,17 @@
+
+@font-face {
+  font-family: 'NanumSquareRoundB';
+  src: url(../src/font/NanumSquareRoundB.woff) format('woff');
+}
+@font-face {
+  font-family: 'NanumSquareRoundEB';
+  src: url(../src/font/NanumSquareRoundEB.woff) format('woff');
+}
+@font-face {
+  font-family: 'NanumSquareRoundL';
+  src: url(../src/font/NanumSquareRoundL.woff) format('woff');
+}
+@font-face {
+  font-family: 'NanumSquareRoundR';
+  src: url(../src/font/NanumSquareRoundR.woff) format('woff');
+}
