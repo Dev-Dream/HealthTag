@@ -23,7 +23,6 @@ router.delete("/disease/:partName/:diseaseName", (req, res) => {
             throw err;
         }
         var count = find_disease[0].count;
-        console.log(count);
         if (count === 0) {
             res.status(404).send("Not Found");
         }
