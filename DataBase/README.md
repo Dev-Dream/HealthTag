@@ -7,4 +7,4 @@
 - [healthtag](https://github.com/Dev-Dream/HealthTag/tree/DB/DataBase/healthtag)
 
 ## 데이터베이스 모식도
-![DB_모식도](https://user-images.githubusercontent.com/55306894/85368905-1104af00-b567-11ea-9d0d-f8f9089a405f.png)
+![DB모식도](https://user-images.githubusercontent.com/55306894/85438032-7f2c8e80-b5c6-11ea-9e86-fc1d4f6d9b88.png)
