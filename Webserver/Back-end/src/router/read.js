@@ -30,6 +30,34 @@ router.get("/part/:partName/:tags", (req, res) => {
     var returnData = {list:[]};
 
     db.query(find_tag_query, (err, find_tag) => {
+        if (err) {
+            throw err;
+        }
+        var i = 0;
+        while (i < find_tag.length) {
+            var element = {name:"", tags:[], desc:"", url:""};
+            element.name = find_tag[i].name;
+            element.tags = find_tag[i].tag.split("#").slice(1);
+            element.desc = find_tag[i].description;
+            element.url = find_tag[i].URL;
+            returnData.list.push(element);
+            i = i + 1;
+        }
+        res.send(returnData);
+    });
+});
+
+router.get("/part/:partName", (req, res) => {
+    var part = req.params.partName;
+    var find_tag_query = "SELECT * FROM "+part+" JOIN diseases USING(name)";
+
+    var returnData = {list:[]};
+
+    db.query(find_tag_query, (err, find_tag) => {
+        if (err) {
+            throw err;
+        }
+
         var i = 0;
         while (i < find_tag.length) {
             var element = {name:"", tags:[], desc:"", url:""};
