@@ -1,5 +1,6 @@
 const _express = require("express");
 const _mysql = require("mysql");
+const _tag = require("../constant/tag.js");
 
 const router = _express.Router();
 
@@ -11,28 +12,41 @@ const db = _mysql.createConnection({
 });
 db.connect();
 
-router.delete("/disease/:partName/:diseaseName", (req, res) => {
-    var part = req.params.partName;
+router.delete("/disease/:diseaseName", (req, res) => {
     var diseaseName = req.params.diseaseName;
 
-    var find_disease_query = "SELECT COUNT(*) AS count FROM "+part+" WHERE name = \'"+diseaseName+"\'";
-    var delete_disease_query = "DELETE FROM "+part+" WHERE name = \'"+diseaseName+"\'";
+    var queryList = [];
+    var dbList = ["diseases", "head", "neck", "chest", "arm", "stomach", "leg"];
 
-    db.query(find_disease_query, (err, find_disease) => {
-        if (err) {
-            throw err;
-        }
-        var count = find_disease[0].count;
-        if (count === 0) {
-            res.status(404).send("Not Found");
-        }
-        db.query(delete_disease_query, (err, delete_disease) => {
-            if (err) {
-                throw err;
-            }
-            res.send(delete_disease);
+    var i = 0;
+    while (i < 7) {
+        queryList.push(`DELETE FROM ${dbList[i]} WHERE name = '${diseaseName}'`);
+        i = i + 1;
+    }
+    
+    db.query(queryList[0], (err, res0) => {
+        if (err) {throw err;}
+        db.query(queryList[1], (err, res1) => {
+            if (err) {throw err;} 
+            db.query(queryList[2], (err, res2) => {
+                if (err) {throw err;} 
+                db.query(queryList[3], (err, res3) => {
+                    if (err) {throw err;}
+                    db.query(queryList[4], (err, res4) => {
+                        if (err) {throw err;}
+                        db.query(queryList[5], (err, res5) => {
+                            if (err) {throw err;}
+                            db.query(queryList[6], (err, res6) => {
+                                if (err) {throw err;}
+                                res.send("delete complete");
+                            });
+                        }); 
+                    });
+                });
+            });
         });
     });
+
 });
 
 module.exports = router;
