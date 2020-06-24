@@ -1,6 +1,5 @@
 const _express = require("express");
 const _session = require("express-session");
-const _tpl = require("../tpl/tpl.js");
 
 const router = _express.Router();
 
