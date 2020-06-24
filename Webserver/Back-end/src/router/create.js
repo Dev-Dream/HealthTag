@@ -1,5 +1,5 @@
 const _express = require("express");
-const _db = require("../db/db.js")
+const _db = require("../important/db.js")
 const _mysql = require("mysql");
 const _bodyParser = require("body-parser");
 const _tag = require("../constant/tag.js");

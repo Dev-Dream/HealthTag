@@ -1,6 +1,6 @@
 const _express = require("express");
 const _mysql = require("mysql");
-const _db = require("../db/db.js");
+const _db = require("../important/db.js");
 const _tag = require("../constant/tag.js");
 
 const router = _express.Router();
