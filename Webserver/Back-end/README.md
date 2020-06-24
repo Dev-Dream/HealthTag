@@ -9,13 +9,13 @@
 6. GET - / : /{part} url로 이동할 수 있는 메인 페이지를 출력
 7. DELETE - /disease/{disease}/{part} : 해당 part DB에서 disease라는 이름을 갖는 질병 삭제
 8. GET - /admin : admin page를 출력. 로그인 시 실제 관리가 가능함.
+9. POST - /admin : password를 body로 넘겨 받아 일치하면 session의 isloggedin 값을 true로 함
 ```
 
 <h1>To Do List</h1>
 
 ```
-1. POST - /admin : password를 body로 넘겨 받아 일치하면 session의 islogin 값을 true로 함
-2. GET - /{part} : 해당 part에 맞는 검색 페이지를 출력
+1. GET - /{part} : 해당 part에 맞는 검색 페이지를 출력
 ```
 
 <h1>You need to prepare</h1>
@@ -29,6 +29,28 @@ module.exports = {
         user     : "root",
         password : "your_mysql_password_here",
         database : "your_db_name_here (recommend healthtag)"
+    }
+}
+```
+<br /> <br />
+/Webserver/Back-end/src/important/session.js <br /> <br />
+is filled with
+```
+module.exports = {
+    session : {
+        secret: "your_secret_string", // whatever it is, it will be okay
+        resave: false,
+        saveUninitialized: true
+    }
+}
+```
+<br /> <br />
+/Webserver/Back-end/src/important/password.js <br /> <br />
+is filled with
+```
+module.exports = {
+    password : {
+        password : "your_own_password" // it will use when you access admin page.
     }
 }
 ```
