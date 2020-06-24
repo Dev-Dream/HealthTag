@@ -1,16 +1,12 @@
 const _express = require("express");
+const _db = require("../db/db.js")
 const _mysql = require("mysql");
 const _bodyParser = require("body-parser");
 const _tag = require("../constant/tag.js");
 
 const router = _express.Router();
 
-const db = _mysql.createConnection({
-    host     : "localhost",
-    user     : "root",
-    password : "mysql",
-    database : "healthtag"
-});
+const db = _mysql.createConnection(_db.local);
 db.connect();
 
 router.use(_bodyParser.urlencoded( { extended: false } ));
