@@ -25,19 +25,19 @@ router.delete("/disease/:diseaseName", (req, res) => {
     }
     
     db.query(queryList[0], (err, res0) => {
-        if (err) {throw err;}
+        if (err) throw err;
         db.query(queryList[1], (err, res1) => {
-            if (err) {throw err;} 
+            if (err) throw err;
             db.query(queryList[2], (err, res2) => {
-                if (err) {throw err;} 
+                if (err) throw err;
                 db.query(queryList[3], (err, res3) => {
-                    if (err) {throw err;}
+                    if (err) throw err;
                     db.query(queryList[4], (err, res4) => {
-                        if (err) {throw err;}
+                        if (err) throw err;
                         db.query(queryList[5], (err, res5) => {
-                            if (err) {throw err;}
+                            if (err) throw err;
                             db.query(queryList[6], (err, res6) => {
-                                if (err) {throw err;}
+                                if (err) throw err;
                                 res.send("delete complete");
                             });
                         }); 
