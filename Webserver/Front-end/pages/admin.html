@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>머리</title>
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="__contents">
+    <h1 class="title"> 관리자 페이지 </h1>
+    <div class="addDisease block">
+      <h1>질병 추가</h1>
+      <input type="text" name="addDisease_name" placeholder="name">
+      <input type="text" name="addDisease_desc" placeholder="description">
+      <input type="text" name="addDisease_url" placeholder="url">
+      <button>추가하기</button>
+    </div>
+    <div class="addPart block">
+      <h1>질병 부위 추가</h1>
+      <input type="text" name="addPart_name" placeholder="name">
+      <div class="radiodiv">
+        <input type="radio" name="addPart_part" value="head">머리
+        <input type="radio" name="addPart_part" value="neck">목
+        <input type="radio" name="addPart_part" value="chest">가슴
+        <input type="radio" name="addPart_part" value="stomach">배
+        <input type="radio" name="addPart_part" value="arm">팔
+        <input type="radio" name="addPart_part" value="leg">다리
+      </div>
+      <input type="text" name="addPart_tags" placeholder="tag (띄어쓰기로 표시)">
+      <button>추가하기</button>
+    </div>
+    <div class="delDisease block">
+      <h1>질병 삭제</h1>
+      <input type="text" name="delDisease_name" placeholder="name">
+      <button>삭제하기</button>
+    </div>
+    <div class="delPart block">
+      <h1>질병 부위 삭제</h1>
+      <input type="text" name="delPart_name" placeholder="name">
+      <div class="radiodiv">
+        <input type="radio" name="delPart_part" value="head">머리
+        <input type="radio" name="delPart_part" value="neck">목
+        <input type="radio" name="delPart_part" value="chest">가슴
+        <input type="radio" name="delPart_part" value="stomach">배
+        <input type="radio" name="delPart_part" value="arm">팔
+        <input type="radio" name="delPart_part" value="leg">다리
+      </div>
+      <button>삭제하기</button>
+    </div>
+  </div>
+
+  <footer>
+    <object class="footer_obj" data="../pages/footer.html" type="text/html"></object>
+  </footer>
+</body>
+<script src="../js/parse_tag.js"></script>
+</html>
