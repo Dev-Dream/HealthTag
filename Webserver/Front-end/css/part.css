@@ -114,5 +114,5 @@ input[type="checkbox"]{
   text-decoration: none;
 }
 .list_item .desc_check:checked ~ .more_info{
-  height: fit-content;
+  height: max-content;
 }
