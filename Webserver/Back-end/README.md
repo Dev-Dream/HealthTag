@@ -10,12 +10,13 @@
 7. DELETE - /disease/{disease}/{part} : 해당 part DB에서 disease라는 이름을 갖는 질병 삭제
 8. GET - /admin : admin page를 출력. 로그인 시 실제 관리가 가능함.
 9. POST - /admin : password를 body로 넘겨 받아 일치하면 session의 isloggedin 값을 true로 함
+10. GET - /{part} : 해당 part에 맞는 검색 페이지를 출력
 ```
 
 <h1>To Do List</h1>
 
 ```
-1. GET - /{part} : 해당 part에 맞는 검색 페이지를 출력
+1. POST - /logout : isloggedin의 값이 true인 사용자가 사용하여, 자기 자신의 session을 파괴
 ```
 
 <h1>You need to prepare</h1>
