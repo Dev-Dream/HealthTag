@@ -46,7 +46,21 @@ router.delete("/disease/:diseaseName", (req, res) => {
             });
         });
     });
+});
 
+router.delete("/disease/:diseaseName/:partName", (req, res) => {
+    var name = req.params.diseaseName;
+    var part = req.params.partName;
+
+
+    if (!_tag.is_available_part(part)) res.status(404).send(`${part} is an unavailable part. Available parts are head, neck, arm, leg, chest, and stomach.`);
+    else {
+        var delete_tag_query = `DELETE FROM ${part} WHERE name = ?`;
+        db.query(delete_tag_query, [name], (err, deltete_tag) => {
+            if (err) throw err;
+            res.send("delete complete");
+        });
+    }
 });
 
 module.exports = router;
