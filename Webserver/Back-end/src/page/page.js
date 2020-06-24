@@ -15,7 +15,7 @@ router.get("/head", (req, res) => {
 });
 
 router.get("/admin", (req, res) => {
-    if (req.session.isLogined) res.sendFile(__dirname+"/html/admin.html");
+    if (req.session.isLoggedin) res.sendFile(__dirname+"/html/admin.html");
     else res.sendFile(__dirname+"/html/login.html");
 });
 
