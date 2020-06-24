@@ -1,0 +1,23 @@
+#leftColumn{
+  display: table-cell;
+  padding-right: 40px;
+}
+#rightColumn{
+  display: table-cell;
+  /* margin-left: 2.127659574468085%; */
+  padding-left: 40px;
+}
+
+.container{
+  padding: 20px;
+  display: flex;
+  /* width: 100%; */
+}
+
+#issues{
+  border:1px solid #444444;
+  border-collapse: collapse;
+}
+#issues tr, th, td{
+  border:1px solid #444444;
+}
