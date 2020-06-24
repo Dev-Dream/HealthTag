@@ -1,1 +1,3 @@
-src/important/*
+src/important/db.js
+src/important/password.js
+src/important/session.js
