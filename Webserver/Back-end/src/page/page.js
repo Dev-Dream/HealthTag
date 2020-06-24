@@ -5,15 +5,15 @@ const _tpl = require("../tpl/tpl.js");
 const router = _express.Router();
 
 router.get("/", (req, res) => {
-    res.send(_tpl.main);
+    res.sendFile(__dirname+"/html/index.html");
 });
 
 router.get("/head", (req, res) => {
-    res.send(_tpl.head);
+    res.sendFile(__dirname+"/html/head.html");
 });
 
 router.get("/admin", (req, res) => {
-    res.send(_tpl.admin);
+    res.sendFile(__dirname+"/html/admin.html");
 });
 
 module.exports = router;
