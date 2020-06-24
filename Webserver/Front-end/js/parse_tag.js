@@ -63,7 +63,7 @@ function setData(result){
     <input type="checkbox" id="desc${index}" class="desc_check">
     <div class="more_info">
       <h2>${element.desc}</h2>
-      <a href="${element.url}">더 알아보기 ></a>
+      <a href="${element.url}" target='blank'>더 알아보기 ></a>
     </div>`;
     listItem.classList.add('list_item');
     document.querySelector('.list').appendChild(listItem);
