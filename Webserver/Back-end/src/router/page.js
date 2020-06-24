@@ -11,4 +11,8 @@ router.get("/head", (req, res) => {
     res.send(_tpl.head);
 });
 
+router.get("/admin", (req, res) => {
+    res.send(_tpl.admin);
+});
+
 module.exports = router;

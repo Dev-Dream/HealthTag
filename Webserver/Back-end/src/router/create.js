@@ -12,7 +12,7 @@ db.connect();
 router.use(_bodyParser.urlencoded( { extended: false } ));
 router.use(_bodyParser.json());
 
-router.put("/disease", (req, res) =>  {
+router.put("/disease", (req, res) => {
     var post = req.body;
 
     var name = post.name;
@@ -20,7 +20,7 @@ router.put("/disease", (req, res) =>  {
     var url = post.url;
 
     var find_disease_query = "SELECT COUNT(*) AS count FROM diseases WHERE name = ?";
-    var insert_disease_query = `INSERT INTO '${part}' VALUES (?, ?, ?)`
+    var insert_disease_query = `INSERT INTO diseases VALUES (?, ?, ?)`
     var update_disease_query = `UPDATE diseases SET description = ?, URL = ? WHERE name = ?`
 
     db.query(find_disease_query, [name], (err, find_disease) => {
@@ -51,8 +51,10 @@ router.put("/disease/:diseaseName", (req, res) => {
     var post = req.body;
 
     var name = req.params.diseaseName;
-    var part = post.partName;
+    var part = post.part;
     var tag = post.tag;
+
+    tag = tag.split("@").join("#");
 
     var find_disease_query = "SELECT COUNT(*) AS count FROM diseases WHERE name = ?";
     if (!_tag.is_available_part(part)) {

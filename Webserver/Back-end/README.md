@@ -16,3 +16,18 @@
 1. GET - /admin : querystring을 통해 받은 인증키와 실제 인증키를 비교하여 boolean값을 return
 2. GET - /{part} : 해당 part에 맞는 검색 페이지를 출력
 ```
+
+<h1>You need to prepare</h1>
+
+/Webserver/Back-end/src/db/db.js <br /> <br />
+is filled with
+```
+module.exports = {
+    local : {
+        host     : "localhost",
+        user     : "root",
+        password : "your_mysql_password_here",
+        database : "your_db_name_here (recommend healthtag)"
+    }
+}
+```
