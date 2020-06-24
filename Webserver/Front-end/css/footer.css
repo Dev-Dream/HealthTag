@@ -35,8 +35,10 @@ footer{
 .footer .footer_content div{
   padding: 2em 3em;
 }
-.footer .footer_content div h1{
+.footer .footer_content div a{
   font-family: 'NanumSquareRoundEB';
+  color: #0b3c16;
+  text-decoration: none;
   font-size: 2em;
 }
 .footer .footer_content div h2{
