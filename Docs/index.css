@@ -14,6 +14,11 @@
   /* width: 100%; */
 }
 
+#banner h1{
+  color: #6ebe82;
+  font-size: 60px;
+}
+
 #issues{
   border:1px solid #444444;
   border-collapse: collapse;
