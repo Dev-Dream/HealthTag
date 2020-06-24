@@ -14,6 +14,10 @@ router.get("/head", (req, res) => {
     res.sendFile(__dirname+"/html/head.html");
 });
 
+router.get("/neck", (req, res) => {
+    res.sendFile(__dirname+"/html/neck.html");
+});
+
 router.get("/admin", (req, res) => {
     if (req.session.isLoggedin) res.sendFile(__dirname+"/html/admin.html");
     else res.sendFile(__dirname+"/html/login.html");
