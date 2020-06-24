@@ -1,5 +1,6 @@
 const _express = require("express");
 const _mysql = require("mysql");
+const _tag = require("../constant/tag.js");
 
 const router = _express.Router();
 
@@ -16,7 +17,9 @@ router.get("/part/:partName/:tags", (req, res) => {
     var tags = req.params.tags.split("@").slice(1);
     var find_tag_query = "SELECT * FROM "+part+" JOIN diseases USING(name)";
     
-    var i = 0;
+    if (!_tag.is_available_part(part)) res.status(404).send(`${part} is an unavailable part. Available parts are head, neck, arm, leg, chest, and stomach.`);
+
+    var i = 0;  
     if (tags.length != 0) {
         find_tag_query = find_tag_query + " WHERE tag LIKE \'\%"+tags[i]+"\%\'";
     }
@@ -50,6 +53,8 @@ router.get("/part/:partName/:tags", (req, res) => {
 router.get("/part/:partName", (req, res) => {
     var part = req.params.partName;
     var find_tag_query = "SELECT * FROM "+part+" JOIN diseases USING(name)";
+
+    if (!_tag.is_available_part(part)) res.status(404).send(`${part} is an unavailable part. Available parts are head, neck, arm, leg, chest, and stomach.`);
 
     var returnData = {list:[]};
 
