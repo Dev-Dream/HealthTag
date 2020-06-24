@@ -26,6 +26,11 @@ router.get("/arm", (req, res) => {
     res.sendFile(__dirname+"/html/arm.html");
 });
 
+router.get("/leg", (req, res) => {
+    res.sendFile(__dirname+"/html/leg.html");
+});
+
+
 router.get("/admin", (req, res) => {
     if (req.session.isLoggedin) res.sendFile(__dirname+"/html/admin.html");
     else res.sendFile(__dirname+"/html/login.html");
