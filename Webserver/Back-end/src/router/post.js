@@ -18,4 +18,10 @@ router.post("/admin", (req, res) => {
     res.redirect("/admin");
 });
 
+router.post("/logout", (req, res) => {
+    req.session.destroy(function(err){
+        res.redirect('/');
+      });
+});
+
 module.exports = router;
