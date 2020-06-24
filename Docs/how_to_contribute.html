@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>HealthTag</title>
+    <link rel="stylesheet" href="index3.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div id="leftColumn">
+          <div>
+            <ul>
+              <li><a href="index.html" title="개요">개요</a></li>
+              <li><a href="license.html" title="라이센스">라이센스</a></li>
+              <li><a href="getting_started.html" title="시작하기">시작하기</a></li>
+              <li><a href="https://github.com/Dev-Dream/HealthTag/wiki" target="_blank" title="위키">위키</a></li>
+              <li><a href="issue.html" title="이슈">이슈</a></li>
+              <li><a href="how_to_contribute.html" title="기여하는 법">기여하는 법</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="rightColumn">
+          <div>
+            <h1>기여하는 법</h1>
+            <div id="codeContribute">
+              <h2>코드 기여 (문서화 포함)</h2>
+              <ol>
+                <li>
+                  HealthTag Github 저장소를 clone하세요.<br/><br/>
+                  <code>
+                    git clone git@github.com:Dev-Dream/HealthTag.git
+                  </code>
+                </li><br/>
+                <li>
+                  코드를 수정하고 저장하세요.<br/>
+                </li><br/>
+                <li>
+                  패치 파일을 생성하세요.<br/><br/>
+                  <code>
+                    git diff --no-prefix > filename
+                  </code><br/><br/>
+                  파일이름은 다음 규칙을 따라주세요.<br/><br/>
+                  <ul>
+                    <li>issueID.author.yymmdd.patch</li>
+                  </ul><br/>
+                  ex) 2.rasauq1122.200624.patch
+                </li><br/>
+                <li>
+                  개발자에게 해당 패치 파일을 전달해주세요. (이메일 등을 통해)
+                </li><br/>
+              </ol>
+            </div>
+            <div id="inhancement">
+              <h2>버그나 개선사항을 발견하시거나 정보 추가를 원하시면 알려주세요.</h2>
+              <ul>
+                <li>Front-end: slimdoks@gmail.com</li>
+                <li>Back-end: rasauq1122@gmail.com</li>
+                <li>Database: high2092@gmail.com</li>
+              </ul>
+            </div>
+            <div id="mailingList">
+              <!-- 어떤 식으로 가입이 이루어지는지 정확히 모르겠음 -->
+              <h2>메일링 리스트에 가입하시면 프로젝트 개발에 관련된 최신 소식을 보내드립니다.</h2>
+              <form>
+                E-mail: <input type="text" name="id"/>
+                <input type="submit" value="제출">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
