@@ -1,9 +1,11 @@
-# HealthTag : 해시태그로 진단하는 내 몸 건강<br/><br/>
-누구든지 쉽게 이용가능한 간단한 개인 질병 진단 툴입니다.<br/><br/>
+# HealthTag : My health diagnosed with hashtags<br/><br/>
+View in: [KO](./README_ko.md) [EN](./README.md)
+
+A simple personal disease diagnosis tool available to anyone.<br/><br/>
 Hanyang Univ. ERICA OSSD Project<br/>
-2019052851 [박준성](https://github.com/rasauq1122) - Backend<br/>
-2019084984 [임기성](https://github.com/pIut0) - Frontend<br/>
-2019036844 [하현우](https://github.com/high2092) - Database
+2019052851 [Junseong Park](https://github.com/rasauq1122) - Backend<br/>
+2019084984 [Kiseong Lim](https://github.com/pIut0) - Frontend<br/>
+2019036844 [Hyunwoo Ha](https://github.com/high2092) - Database
 <!-- ## Team Member
  2019052851 [박준성](https://github.com/rasauq1122) - Backend<br/>
  2019084984 [임기성](https://github.com/pIut0) - Frontend<br/>
@@ -28,43 +30,74 @@ MySQL|DB management|5.7.3.0
 Node.js|Runtime environment|8.10.0
 <br/>
 
-### #️⃣ Download (Ubuntu 기준)
+### #️⃣ Download (Ubuntu 18.04 LTS)
 
-#### 1. 이 Github 저장소를 clone하세요.
+#### 1. Clone this github repository
 ```
 git clone git@github.com:Dev-Dream/HealthTag.git
 ```
-#### 2. 구동에 필요한 프로그램을 설치하세요. 
+#### 2. Install programs for running server
 ```
 sudo apt-get install mysql-server
 sudo apt install nodejs
 ```
 
-#### 3. 데이터베이스 계정에 대한 비밀번호 설정을 마쳐주세요.
-방법1. mysql에서 root 계정의 비밀번호를 변경하세요.
+#### 3. Set for mysql
+Start the mysql shell.
 ```
 sudo mysql -uroot
 ```
-+ 다음 명령어는 mysql 내부에서 입력해야 합니다.
++ Set your password for mysql-server.
 ```
 USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
 ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "mysql";
 CREATE DATABASE healthtag;
 ```
-방법2. 데이터베이스를 참조하는 코드에서 비밀번호를 변경하세요.
-#### 4. 데이터베이스를 복원하세요.
-clone 받은 로컬 경로로 이동해 다음 명령어를 입력하세요.
+#### 4. Restore database
+Go to the local path you received the clone, then enter the following command
 ```
 mysql -uroot -p healthtag < DataBase/healthtag/healthtag.sql
 ```
+<br/>
+
+### #️⃣ Pre-pare
+#### 1. fill `/Webserver/Back-end/src/important/db.js` with
+```
+module.exports = {
+    local : {
+        host     : "localhost",
+        user     : "root",
+        password : "your_mysql_password", // it will use when server accesses DB
+        database : "your_db_name" //recommend healthtag
+    }
+}
+```
+
+#### 2. fill `/Webserver/Back-end/src/important/session.js` with
+```module.exports = {
+    session : {
+        secret: "your_secret_string", // whatever it is, it will be okay
+        resave: false,
+        saveUninitialized: true
+    }
+}
+```
+#### 3. fill `/Webserver/Back-end/src/important/password.js` with
+```
+module.exports = {
+    password : "your_own_password" // it will use when you access admin page.
+}
+```
+<br/>
+
 ### #️⃣ Run
-#### 1. clone 받은 로컬 경로로 이동해 다음 명령어를 입력하세요.
+#### 1. Run server
 ```
 cd Webserver/Back-end
 node main.js
 ```
-#### 2. 웹 브라우저를 켜 주소창에 `localhost:3000`을 입력하세요.
+#### 2. Access to `localhost:3000` with your Browser
 <br/>
 
 <!-- ## Service Intro -->
