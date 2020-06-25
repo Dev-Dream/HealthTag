@@ -7,6 +7,7 @@
 
 .__contents{
   width: 100%;
+  overflow: hidden;
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -115,4 +116,44 @@ input[type="checkbox"]{
 }
 .list_item .desc_check:checked ~ .more_info{
   height: max-content;
+}
+
+
+/* Mobile */
+
+.m_title{
+  display: none;
+}
+@media (max-width: 840px){
+  .title{
+    /* display: none; */
+    width: 100vw;
+    padding: 100px 30px 50px 30px;
+  }
+  .title .title_content{
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  .title .title_content .tags{
+    justify-content: center;
+  }
+  .title img{
+    display: none;
+  }
+
+  .list{
+    width: 100vw;
+    padding: 0px 20px 50px 20px;
+  }
+  .list .list_item{
+    padding: .3em .5em;
+    margin: .5em 1.5em;
+  }
+  .list .list_item .base_info h1{
+    font-size: 1em;
+  }
+  .list .list_item .base_info h2{
+    display: none;
+  }
 }
