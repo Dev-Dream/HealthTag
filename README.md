@@ -26,9 +26,6 @@ Required|category|version
 --|--|--
 MySQL|DB management|5.7.3.0
 Node.js|Runtime environment|8.10.0
-Express.js|Web framework|-
-npm|Package management|-
-body-parser|Node.js module|-
 <br/>
 
 ### #️⃣ Download (Ubuntu 기준)
@@ -39,11 +36,8 @@ git clone git@github.com:Dev-Dream/HealthTag.git
 ```
 #### 2. 구동에 필요한 프로그램을 설치하세요. 
 ```
-sudo apt install mysql-client-core-5.7
 sudo apt-get install mysql-server
 sudo apt install nodejs
-sudo apt install npm
-npm install
 ```
 
 #### 3. 데이터베이스 계정에 대한 비밀번호 설정을 마쳐주세요.
@@ -53,19 +47,21 @@ sudo mysql -uroot
 ```
 + 다음 명령어는 mysql 내부에서 입력해야 합니다.
 ```
+USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
 ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "mysql";
 CREATE DATABASE healthtag;
 ```
 방법2. 데이터베이스를 참조하는 코드에서 비밀번호를 변경하세요.
-#### 4. mysql을 실행하고 데이터베이스를 복원하세요.
-
+#### 4. 데이터베이스를 복원하세요.
+clone 받은 로컬 경로로 이동해 다음 명령어를 입력하세요.
 ```
-mysql -uroot -p healthtag < healthtag.sql
+mysql -uroot -p healthtag < DataBase/healthtag/healthtag.sql
 ```
 ### #️⃣ Run
-#### 1. clone 받으신 로컬 경로로 가서 다음 명령어를 입력하세요.
+#### 1. clone 받은 로컬 경로로 이동해 다음 명령어를 입력하세요.
 ```
+cd Webserver/Back-end
 node main.js
 ```
 #### 2. 웹 브라우저를 켜 주소창에 `localhost:3000`을 입력하세요.
