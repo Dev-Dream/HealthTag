@@ -39,9 +39,9 @@
             <div id="download">
               <h2>다운로드</h2>
               Git을 통해 소스 코드를 다운로드하실 수 있습니다.<br/><br/>
-              > <code>git clone git@github.com:Dev-Dream/HealthTag.git</code><br/><br/>
+              <code>git clone git@github.com:Dev-Dream/HealthTag.git</code><br/><br/>
               구동에 필요한 프로그램을 설치하세요.<br/><br/>
-              > <code>
+              <code>
                 sudo apt-get install mysql-server<br/>
                 sudo apt install nodejs
               </code><br/><br/>
@@ -49,7 +49,7 @@
             <div id="prepare">
               <h2>준비하기</h2>
               1. 데이터베이스 계정에 대한 비밀번호 설정을 마쳐주세요.<br/><br/>
-              > <code>
+              <code>
                 sudo mysql -uroot
                 USE mysql;<br/>
                 UPDATE user SET plugin="mysql_native_password" where user="root";<br/>
@@ -57,34 +57,35 @@
                 CREATE DATABASE healthtag;
               </code><br/><br/><Br/>
               2. 데이터베이스를 복원하세요.<br/><br/>
-              > <code>
+              <code>
                 mysql -uroot -p healthtag < DataBase/healthtag/healthtag.sql
               </code><br/><br/><br/>
               3. <code>/Webserver/Back-end/src/important/db.js</code>를 다음 코드로 채우세요.<br/><br/>
               <code>
-              module.exports = {
-                  local : {
-                      host     : "localhost",
-                      user     : "root",
-                      password : "your_mysql_password", // it will use when server accesses DB
-                      database : "your_db_name" //recommend healthtag
-                  }
-              }
+                module.exports = {<br/>
+                  &nbsp;&nbsp;local : {<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;host     : "localhost",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;user     : "root",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;password : "your_mysql_password", // it will use when server accesses DB<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;database : "your_db_name" //recommend healthtag<br/>
+                  &nbsp;&nbsp;}<br/>
+                }<br/>
               </code><br/><br/><br/>
               4. <code>/Webserver/Back-end/src/important/session.js</code>를 다음 코드로 채우세요.<br/><br/>
               <code>
-                session : {
-                  secret: "your_secret_string", // whatever it is, it will be okay
-                  resave: false,
-                  saveUninitialized: true
-              }
-          }
+                module.exports = {<br/>
+                  &nbsp;&nbsp;session : {<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;secret: "your_secret_string", // whatever it is, it will be okay<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;resave: false,<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;saveUninitialized: true<br/>
+                  &nbsp;&nbsp;}<br/>
+                }<br/>
               </code><br/><br/><br/>
               5. <code>/Webserver/Back-end/src/important/password.js</code>를 다음 코드로 채우세요.<br/><br/>
               <code>
-                module.exports = {
-                  password : "your_own_password" // it will use when you access admin page.
-              }
+                module.exports = {<br/>
+                  &nbsp;&nbsp;password : "your_own_password" // it will use when you access admin page.<br/>
+              }<br/>
               </code><br/><br/>
             </div>
             <div id="run">
