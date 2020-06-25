@@ -40,6 +40,22 @@ router.get("/about", (req, res) => {
     res.sendFile(front_path+"/about.html");
 });
 
+router.get("/getting_started", (req, res) => {
+    res.sendFile(front_path+"/getting_started.html");
+});
+
+router.get("/how_to_contribute", (req, res) => {
+    res.sendFile(front_path+"/how_to_contribute.html");
+});
+
+router.get("/info", (req, res) => {
+    res.sendFile(front_path+"/info.html");
+});
+
+router.get("/issue", (req, res) => {
+    res.sendFile(front_path+"/issue.html");
+});
+
 router.get("/admin", (req, res) => {
     if (req.session.isLoggedin) res.sendFile(front_path+"/admin.html");
     else res.sendFile(front_path+"/login.html");
