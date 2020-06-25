@@ -54,3 +54,48 @@ module.exports = {
     password : "your_own_password" // it will use when you access admin page.
 }
 ```
+<h1>How to Build</h1>
+
+<strong>1. Clone this github repository and move directory to here</strong>
+```
+git clone git@github.com:Dev-Dream/HealthTag.git
+cd HealthTag
+```
+
+<strong>2. Download programs for running server</strong>
+```
+sudo apt-get install mysql-server
+sudo apt install nodejs
+```
+
+<strong>3. Set for mysql</strong>
+
+Start the mysql shell
+```
+sudo mysql -uroot
+```
+
+Set your password for mysql-server
+```
+USE mysql;
+UPDATE user SET plugin="mysql_native_password" where user="root";
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_password"; --you should remember this
+```
+
+Create database for HealthTag
+```
+CREATE DATABASE your_db_name --recommend healthtag, and you should remember this too
+```
+
+Fill database your DB with healthtag.sql
+```
+mysql -uroot -p your_db_name < ./DataBase/HealthTag/healthtag.sql
+```
+
+<strong>4. Run server</strong>
+```
+cd Webserver/Back-end
+node main.js
+```
+
+<strong>5. Access to localhost:3000 with your Browser</strong>
