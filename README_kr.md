@@ -1,5 +1,5 @@
 # HealthTag : 해시태그로 진단하는 내 몸 건강<br/><br/>
-다음 언어로 보기: [KO](./README_ko.md) [EN](./README.md)
+다음 언어로 보기: [KR](./README_kr.md) [EN](./README.md)
 
 누구든지 쉽게 이용가능한 간단한 개인 질병 진단 툴입니다.<br/><br/>
 Hanyang Univ. ERICA OSSD Project<br/>
@@ -51,7 +51,7 @@ sudo mysql -uroot
 ```
 USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
-ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_password"; --you should remember this
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_mysql_password"; --you should remember this
 ```
 + 스키마를 생성하세요.
 ```

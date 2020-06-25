@@ -79,7 +79,7 @@ Set your password for mysql-server
 ```
 USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
-ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_password"; --you should remember this
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_mysql_password"; --you should remember this
 ```
 
 Create database for HealthTag

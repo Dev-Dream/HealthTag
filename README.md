@@ -1,5 +1,5 @@
 # HealthTag : My health diagnosed with hashtags<br/><br/>
-View in: [KO](./README_ko.md) [EN](./README.md)
+View in: [KR](./README_kr.md) [EN](./README.md)
 
 A simple personal disease diagnosis tool available to anyone.<br/><br/>
 Hanyang Univ. ERICA OSSD Project<br/>
@@ -51,7 +51,7 @@ sudo mysql -uroot
 ```
 USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
-ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_password"; --you should remember this
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_mysql_password"; --you should remember this
 ```
 + Create a schema
 ```

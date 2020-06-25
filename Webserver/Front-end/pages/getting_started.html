@@ -48,17 +48,17 @@
             </div>
             <div id="prepare">
               <h2>준비하기</h2>
-              1. 데이터베이스 계정에 대한 비밀번호 설정을 마쳐주세요.<br/><br/>
+              1. 데이터베이스 계정에 대한 비밀번호 설정과 테이블 생성을 마쳐주세요.<br/><br/>
               <code>
                 sudo mysql -uroot
                 USE mysql;<br/>
                 UPDATE user SET plugin="mysql_native_password" where user="root";<br/>
-                ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "mysql";<br/>
-                CREATE DATABASE healthtag;
-              </code><br/><br/><Br/>
+                ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_mysql_password";<br/>
+                CREATE DATABASE your_db_name;
+              </code><br/><br/><br/>
               2. 데이터베이스를 복원하세요.<br/><br/>
               <code>
-                mysql -uroot -p healthtag < DataBase/healthtag/healthtag.sql
+                mysql -uroot -p your_db_name < DataBase/healthtag/healthtag.sql
               </code><br/><br/><br/>
               3. <code>/Webserver/Back-end/src/important/db.js</code>를 다음 코드로 채우세요.<br/><br/>
               <code>
