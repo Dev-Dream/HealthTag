@@ -89,7 +89,7 @@ CREATE DATABASE your_db_name --recommend healthtag, and you should remember this
 
 Fill database your DB with healthtag.sql
 ```
-mysql -uroot -p your_db_name < ./DataBase/HealthTag/healthtag.sql
+mysql -uroot -p your_db_name < ./DataBase/healthtag/healthtag.sql
 ```
 
 <strong>4. Run server</strong>
