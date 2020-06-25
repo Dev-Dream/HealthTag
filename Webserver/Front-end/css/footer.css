@@ -49,7 +49,7 @@ footer{
 /* mobile */
 
 
-@media (max-width: 1000px){
+@media (max-width: 840px){
   .footer_obj{
     height: 17.1em;
     overflow: hidden;
