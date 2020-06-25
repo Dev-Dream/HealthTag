@@ -2,6 +2,8 @@
 View in: [KR](./README_kr.md) [EN](./README.md)
 
 A simple personal disease diagnosis tool available to anyone.<br/><br/>
+[Visit GitHub Page](https://dev-dream.github.io/HealthTag/)
+
 Hanyang Univ. ERICA OSSD Project<br/>
 2019052851 [Junseong Park](https://github.com/rasauq1122) - Backend<br/>
 2019084984 [Kiseong Lim](https://github.com/pIut0) - Frontend<br/>

@@ -2,6 +2,8 @@
 다음 언어로 보기: [KR](./README_kr.md) [EN](./README.md)
 
 누구든지 쉽게 이용가능한 간단한 개인 질병 진단 툴입니다.<br/><br/>
+[GitHub Page 방문하기](https://dev-dream.github.io/HealthTag/)
+
 Hanyang Univ. ERICA OSSD Project<br/>
 2019052851 [박준성](https://github.com/rasauq1122) - Backend<br/>
 2019084984 [임기성](https://github.com/pIut0) - Frontend<br/>
