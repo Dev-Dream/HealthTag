@@ -5,7 +5,7 @@
 }
 
 footer{
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
 .footer_obj{
@@ -44,4 +44,28 @@ footer{
 .footer .footer_content div h2{
   font-family: 'NanumSquareRoundB';
   font-size: 1.1em;
+}
+
+/* mobile */
+
+
+@media (max-width: 1000px){
+  .footer_obj{
+    height: 17.1em;
+    overflow: hidden;
+  }
+  .footer_content{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .footer .footer_content div{
+    padding: 1em 0em;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #0b3c16;
+  }
+  .footer .footer_content div:last-child{
+    border-bottom: 2px solid #0b3c16;
+  }
 }
