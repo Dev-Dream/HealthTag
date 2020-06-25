@@ -105,3 +105,13 @@ node main.js
 <br/>
 
 <!-- ## Service Intro -->
+
+### #️⃣ Service
+#### 1. 증상이 느껴지는 부위를 선택하세요
+![scr_1](./Webserver/Front-end/public/src/about1.png)
+<br/>
+#### 2. 겪고있는 증상을 골라주세요
+![scr_2](./Webserver/Front-end/public/src/about2.png)
+<br/>
+#### 3. 다양한 병의 정보를 확인하세요
+![scr_3](./Webserver/Front-end/public/src/about3.png)
