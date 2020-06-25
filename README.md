@@ -106,12 +106,14 @@ node main.js
 
 <!-- ## Service Intro -->
 
-### #️⃣ Service
+
+## Service Intro
+
 #### 1. Select the part where you feel the symptoms.
 ![scr_1](./Webserver/Front-end/public/src/about1.png)
 <br/>
 #### 2. Choose the symptoms you're experiencing.
 ![scr_2](./Webserver/Front-end/public/src/about2.png)
 <br/>
-#### 3. Get information about various diseases
+#### 3. Get information about various diseases.
 ![scr_3](./Webserver/Front-end/public/src/about3.png)
