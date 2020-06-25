@@ -29,8 +29,8 @@ module.exports = {
     local : {
         host     : "localhost",
         user     : "root",
-        password : "your_mysql_password_here",
-        database : "your_db_name_here (recommend healthtag)"
+        password : "your_mysql_password", // it will use when server accesses DB
+        database : "your_db_name" //recommend healthtag
     }
 }
 ```
@@ -51,8 +51,6 @@ module.exports = {
 is filled with
 ```
 module.exports = {
-    password : {
-        password : "your_own_password" // it will use when you access admin page.
-    }
+    password : "your_own_password" // it will use when you access admin page.
 }
 ```
