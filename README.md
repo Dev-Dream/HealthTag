@@ -26,8 +26,8 @@ Hanyang Univ. ERICA OSSD Project<br/>
 ### #️⃣ Prerequisites
 Required|category|version
 --|--|--
-MySQL|DB management|5.7.3.0
-Node.js|Runtime environment|8.10.0
+[MySQL](https://dev.mysql.com/downloads/mysql/)|DB management|5.7.3.0
+[Node.js](https://nodejs.org/ko/download/)|Runtime environment|8.10.0
 <br/>
 
 ### #️⃣ Download (Ubuntu 18.04 LTS)
@@ -75,7 +75,8 @@ module.exports = {
 ```
 
 #### 2. fill `/Webserver/Back-end/src/important/session.js` with
-```module.exports = {
+```
+module.exports = {
     session : {
         secret: "your_secret_string", // whatever it is, it will be okay
         resave: false,
