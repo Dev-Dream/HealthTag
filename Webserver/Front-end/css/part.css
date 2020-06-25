@@ -128,7 +128,8 @@ input[type="checkbox"]{
   .title{
     /* display: none; */
     width: 100vw;
-    padding: 100px 30px 50px 30px;
+    padding: 50px 30px 50px 30px;
+    flex-direction: column;
   }
   .title .title_content{
     margin-left: 0px;
@@ -139,7 +140,8 @@ input[type="checkbox"]{
     justify-content: center;
   }
   .title img{
-    display: none;
+    /* display: none; */
+    margin-bottom: 30px;
   }
 
   .list{
