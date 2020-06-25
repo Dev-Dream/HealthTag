@@ -42,17 +42,20 @@ sudo apt-get install mysql-server
 sudo apt install nodejs
 ```
 
-#### 3. 데이터베이스 계정에 대한 비밀번호 설정을 마쳐주세요.
+#### 3. 데이터베이스 설정을 마쳐주세요.
 mysql을 실행하세요.
 ```
 sudo mysql -uroot
 ```
-+ 다음 명령어는 mysql 내부에서 입력해야 합니다.
++ 비밀번호를 설정하세요.
 ```
 USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
-ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "mysql";
-CREATE DATABASE healthtag;
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_password"; --you should remember this
+```
++ 스키마를 생성하세요.
+```
+CREATE DATABASE your_db_name --recommend healthtag, and you should remember this too
 ```
 #### 4. 데이터베이스를 복원하세요.
 clone 받은 로컬 경로로 이동해 다음 명령어를 입력하세요.

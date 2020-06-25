@@ -47,17 +47,20 @@ Start the mysql shell.
 ```
 sudo mysql -uroot
 ```
-+ Set your password for mysql-server.
++ Set your password for mysql-server
 ```
 USE mysql;
 UPDATE user SET plugin="mysql_native_password" where user="root";
-ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "mysql";
-CREATE DATABASE healthtag;
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "your_password"; --you should remember this
+```
++ Create a schema
+```
+CREATE DATABASE your_db_name --recommend healthtag, and you should remember this too
 ```
 #### 4. Restore database
 Go to the local path you received the clone, then enter the following command
 ```
-mysql -uroot -p healthtag < DataBase/healthtag/healthtag.sql
+mysql -uroot -p your_db_name < DataBase/healthtag/healthtag.sql
 ```
 <br/>
 
