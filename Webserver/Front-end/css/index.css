@@ -1,0 +1,187 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'NanumSquareRoundB';
+}
+.full_page{
+    /* background: url(../src/main_bg.png) center center no-repeat; */
+    width: 100%;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    position: relative;
+    width: min-content;
+    /* width: 200px; */
+    /* height: 200px; */
+    /* background-color: skyblue; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content > div{
+    display: flex;
+}
+
+.body_pieces{
+    width: 600px;
+    background-color: rgba(255,255,255,1);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.body_pieces .head{
+    z-index: 10;
+    background: url(../src/origin_img/head.png) left center/60% no-repeat;
+}
+.body_pieces .neck{
+    z-index: 10;
+    margin-left: 15px;
+    margin-top: 3px;
+    background: url(../src/origin_img/neck.png) left center/60% no-repeat;
+}
+.body_pieces .chest{
+    z-index: 10;
+    margin-left: 35px;
+    margin-top: 3px;
+    background: url(../src/origin_img/chest.png) left center/60% no-repeat;
+}
+.body_pieces .stomach{
+    z-index: 11;
+    margin-left: 55px;
+    margin-top: -20px;
+    background: url(../src/origin_img/stomach.png) left center/60% no-repeat;
+}
+.body_pieces .l_arm{
+    z-index: 0;
+    margin-top: -310px;
+    margin-left: -180px;
+    background: url(../src/origin_img/l_arm.png) left center/60% no-repeat;
+}
+.body_pieces .l_hand{
+    z-index: 0;
+    margin-top: -3px;
+    margin-left: -325px;
+    background: url(../src/origin_img/l_hand.png) left center/60% no-repeat;
+}
+.body_pieces .r_arm{
+    z-index: 12;
+    margin-top: -333px;
+    margin-left: 213px;
+    background: url(../src/origin_img/r_arm.png) left center/60% no-repeat;
+}
+.body_pieces .r_hand{
+    z-index: 12;
+    margin-top: -5px;
+    margin-left: 293px;
+    background: url(../src/origin_img/r_hand.png) left center/60% no-repeat;
+}
+.body_pieces .l_leg{
+    z-index: 0;
+    margin-top: -60px;
+    margin-left: -90px;
+    background: url(../src/origin_img/l_leg.png) left center/60% no-repeat;
+}
+.body_pieces .l_foot{
+    z-index: 0;
+    margin-top: 3px;
+    margin-left: -138px;
+    background: url(../src/origin_img/l_foot.png) left center/60% no-repeat;
+}
+.body_pieces .r_leg{
+    z-index: 12;
+    margin-top: -355px;
+    margin-left: 88px;
+    background: url(../src/origin_img/r_leg.png) left center/60% no-repeat;
+}
+.body_pieces .r_foot{
+    z-index: 0;
+    margin-top: 2px;
+    margin-left: 133px;
+    background: url(../src/origin_img/r_foot.png) left center/60% no-repeat;
+}
+.body_pieces img{
+    opacity: 0;
+    width: 60%;
+}
+.body_pieces img:hover{
+    transition: opacity 0.3s;
+    opacity: 1;
+    /* visibility: visible; */
+}
+
+.title{
+    /* padding-left: 70px; */
+    width: 450px;
+    flex-flow: column;
+    justify-content: center;
+}
+.title h1, .title h2{
+    display: block;
+    font-family: NanumSquareRoundB;
+}
+.title h1{
+    font-size: 80px;
+    color: #9bdeac;
+    text-shadow: 0px 0px 5px #6ebe82,0px 0px 3px #6ebe82,0px 0px 3px #6ebe82;
+    margin-bottom: 12px;
+    font-family: NanumSquareRoundEB;
+    /* border-bottom: 2px solid #2c6e29; */
+}
+
+
+/* Mobile */
+
+.mobile_content{
+    display: none;
+}
+
+@media (max-width: 1060px){
+    .content{
+        display: none;
+    }
+    .mobile_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .m_title{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 12px;
+        padding-top: 30px;
+        background-color: #184822;
+    }
+    .m_title h1{
+        font-size: 50px;
+        text-shadow: 0px 0px 5px #6ebe82,0px 0px 3px #6ebe82,0px 0px 3px #6ebe82;
+        margin: 12px;
+        font-family: NanumSquareRoundEB;
+    }
+
+    .m_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+    }
+    .m_list a{
+        margin: 15px;
+        padding: 10px;
+        width: 70%;
+        text-align: center;
+        color: #0b3c16;
+        text-decoration: none;
+        font-size: 35px;
+        border: 2.5px solid #0b3c16;
+        border-radius: 3px;
+
+    }
+}

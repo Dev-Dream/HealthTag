@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>머리</title>
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/part.css">
+</head>
+<body>
+  <div class="__contents">
+    <div class="title">
+      <img src="../src/part/head.png" alt="Head">
+      <div class="title_content">
+        <h1>머리</h1>
+        <!-- #발열#두통#피로#구토#어지러움#발작#기억력감퇴#수면장애#인지기능저하 -->
+        <div class="tags">
+          <input type="checkbox" name="tags" id="fever" value="발열">
+          <label for="fever">#발열</label>
+
+          <input type="checkbox" name="tags" id="headache" value="두통">
+          <label for="headache">#두통</label>
+
+          <input type="checkbox" name="tags" id="fatigue" value="피로">
+          <label for="fatigue">#피로</label>
+          
+          <input type="checkbox" name="tags" id="vomiting" value="구토">
+          <label for="vomiting">#구토</label>
+          
+          <input type="checkbox" name="tags" id="dizziness" value="어지러움">
+          <label for="dizziness">#어지러움</label>
+          
+          <input type="checkbox" name="tags" id="seizure" value="발작">
+          <label for="seizure">#발작</label>
+          
+          <input type="checkbox" name="tags" id="memory" value="기억력감퇴">
+          <label for="memory">#기억력감퇴</label>
+          
+          <input type="checkbox" name="tags" id="sleep" value="수면장애">
+          <label for="sleep">#수면장애</label>
+          
+          <input type="checkbox" name="tags" id="cognitive" value="인지기능저하">
+          <label for="cognitive">#인지기능저하</label>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="list">
+    </div>
+  </div>
+
+  <footer>
+    <object class="footer_obj" data="../pages/footer.html" type="text/html"></object>
+  </footer>
+</body>
+<script src="../js/parse_tag.js"></script>
+</html>
